@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace HotelChainDbManager.Models;
 
-public class SQuery245Output
+public class SQuery2Output
 {
     [DisplayName("Номер ID-картки")]
     public int IdCardNumber { get; set; }
