@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelChainDbManager.Data;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Security.Claims;
 
 namespace HotelChainDbManager.Controllers;
 
@@ -28,7 +30,7 @@ public class EmployeesController : Controller
     // GET: Employees/Create
     public IActionResult Create()
     {
-        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Id");
+        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Name");
         ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number");
         return View();
     }
@@ -40,13 +42,22 @@ public class EmployeesController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("IdCardNumber,Name,Surname,Patronimic,DateOfBirth,Gender,CompanyPosition,HotelNumber")] Employee employee)
     {
+        if (EmployeeExists(employee.IdCardNumber))
+        {
+            ModelState.AddModelError("IdCardNumber", "Ви не можете використати цей ключ");
+            ModelState["IdCardNumber"].ValidationState = ModelValidationState.Invalid;
+        }
+
+        ModelState["HotelNumberNavigation"].ValidationState = ModelValidationState.Valid;
+        ModelState["CompanyPositionNavigation"].ValidationState = ModelValidationState.Valid;
+
         if (ModelState.IsValid)
         {
             _context.Add(employee);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Id", employee.CompanyPosition);
+        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Name", employee.CompanyPosition);
         ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", employee.HotelNumber);
         return View(employee);
     }
@@ -64,7 +75,7 @@ public class EmployeesController : Controller
         {
             return NotFound();
         }
-        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Id", employee.CompanyPosition);
+        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Name", employee.CompanyPosition);
         ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", employee.HotelNumber);
         return View(employee);
     }
@@ -80,6 +91,9 @@ public class EmployeesController : Controller
         {
             return NotFound();
         }
+
+        ModelState["HotelNumberNavigation"].ValidationState = ModelValidationState.Valid;
+        ModelState["CompanyPositionNavigation"].ValidationState = ModelValidationState.Valid;
 
         if (ModelState.IsValid)
         {
@@ -101,7 +115,7 @@ public class EmployeesController : Controller
             }
             return RedirectToAction(nameof(Index));
         }
-        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Id", employee.CompanyPosition);
+        ViewData["CompanyPosition"] = new SelectList(_context.CompanyPositions, "Id", "Name", employee.CompanyPosition);
         ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", employee.HotelNumber);
         return View(employee);
     }

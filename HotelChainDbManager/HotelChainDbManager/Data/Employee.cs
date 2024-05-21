@@ -32,10 +32,12 @@ public partial class Employee
     public string Gender { get; set; } = null!;
 
     [DisplayName("Позиція в компанії")]
+    [Required(ErrorMessage = "Введіть позицію в компанії")]
     public int CompanyPosition { get; set; }
 
     [DisplayName("Номер готелю")]
     [Required(ErrorMessage = "Введіть номер готелю")]
+    [Range(1, int.MaxValue, ErrorMessage = "Номер готелю має бути додатній")]
     public int HotelNumber { get; set; }
 
     public virtual CompanyPosition CompanyPositionNavigation { get; set; } = null!;

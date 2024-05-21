@@ -31,6 +31,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(model => item.Number)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.HotelNumber)
             </td>
             <td>
@@ -40,8 +43,18 @@
                 @Html.DisplayFor(modelItem => item.ClassNavigation.Name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", item) |
-                @Html.ActionLink("Delete", "Delete", item)
+                <a asp-action="Edit" 
+                    asp-route-hotelNumber="@item.HotelNumber"
+                    asp-route-number="@item.Number" 
+                    asp-route-class="@item.Class"
+                    asp-route-capacity="@item.Capacity"
+                    class="btn btn-primary">Редагувати</a> |
+                <a asp-action="Delete"
+                    asp-route-hotelNumber="@item.HotelNumber"
+                    asp-route-number="@item.Number"
+                    asp-route-class="@item.Class"
+                    asp-route-capacity="@item.Capacity"
+                    class="btn btn-danger">Видалити</a>
             </td>
         </tr>
 }

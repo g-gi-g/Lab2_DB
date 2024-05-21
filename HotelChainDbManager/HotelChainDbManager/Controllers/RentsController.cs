@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelChainDbManager.Data;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace HotelChainDbManager.Controllers;
 
@@ -29,6 +30,7 @@ public class RentsController : Controller
     public IActionResult Create()
     {
         ViewData["Resident"] = new SelectList(_context.Residents, "IdCardNumber", "IdCardNumber");
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number");
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number");
         return View();
     }
@@ -40,13 +42,26 @@ public class RentsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Resident,RoomNumber,HotelNumber,CostPerDay,RentStart,RentEnd")] Rent rent)
     {
+        if (!RoomExists(rent.HotelNumber, rent.RoomNumber))
+        {
+            ModelState.AddModelError("HotelNumber", "Ви не можете використати цей ключ");
+            ModelState.AddModelError("RoomNumber", "Ви не можете використати цей ключ");
+            ModelState["HotelNumber"].ValidationState = ModelValidationState.Invalid;
+            ModelState["RoomNumber"].ValidationState = ModelValidationState.Invalid;
+        }
+
+        ModelState["Room"].ValidationState = ModelValidationState.Valid;
+        ModelState["ResidentNavigation"].ValidationState = ModelValidationState.Valid;
+
         if (ModelState.IsValid)
         {
             _context.Add(rent);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
         ViewData["Resident"] = new SelectList(_context.Residents, "IdCardNumber", "IdCardNumber", rent.Resident);
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", rent.HotelNumber);
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", rent.RoomNumber);
         return View(rent);
     }
@@ -58,8 +73,6 @@ public class RentsController : Controller
         {
             return NotFound();
         }
-        ViewData["Resident"] = new SelectList(_context.Residents, "IdCardNumber", "IdCardNumber", rent.Resident);
-        ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", rent.RoomNumber);
         return View(rent);
     }
 
@@ -70,6 +83,9 @@ public class RentsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, [Bind("Resident,RoomNumber,HotelNumber,CostPerDay,RentStart,RentEnd")]  Rent rent)
     {
+        ModelState["Room"].ValidationState = ModelValidationState.Valid;
+        ModelState["ResidentNavigation"].ValidationState = ModelValidationState.Valid;
+
         if (ModelState.IsValid)
         {
             try
@@ -91,6 +107,7 @@ public class RentsController : Controller
             return RedirectToAction(nameof(Index));
         }
         ViewData["Resident"] = new SelectList(_context.Residents, "IdCardNumber", "IdCardNumber", rent.Resident);
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", rent.HotelNumber);
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", rent.RoomNumber);
         return View(rent);
     }
@@ -122,6 +139,11 @@ public class RentsController : Controller
 
     private bool RentExists(Rent _rent)
     {
-        return _context.Rents.Any(m => m.Resident == _rent.Resident && m.HotelNumber == _rent.HotelNumber && m.RoomNumber == m.RoomNumber);
+        return _context.Rents.Any(m => m.Resident == _rent.Resident && m.HotelNumber == _rent.HotelNumber && m.RoomNumber == _rent.RoomNumber);
+    }
+
+    private bool RoomExists(int hotelNumber, int roomNumber)
+    {
+        return _context.Rooms.Any(m => m.Number == roomNumber && m.HotelNumber == hotelNumber);
     }
 }

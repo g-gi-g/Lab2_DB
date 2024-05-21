@@ -1,9 +1,9 @@
 ﻿SELECT "Employees"."IdCardNumber"
 FROM "Employees"
 WHERE NOT EXISTS 
-	(SELECT "Rents"."RoomNumber"
-	FROM "Rents"
-	WHERE "Rents"."HotelNumber" <> "Employees"."HotelNumber")
+	(SELECT "Services"."RoomNumber"
+	FROM "Services"
+	WHERE "Employees"."IdCardNumber" = "Services"."Employee" AND "Services"."HotelNumber" <> "Employees"."HotelNumber")
 AND "Employees"."CompanyPosition" IN 
 	(SELECT "CompanyPositions"."Id"
 	FROM "CompanyPositions"

@@ -7,7 +7,7 @@ namespace HotelChainDbManager.Data;
 
 public partial class Room
 {
-    [DisplayName("Номер")]
+    [DisplayName("Номер кімнати")]
     [Required(ErrorMessage = "Введіть номер кімнати")]
     [Range(1, int.MaxValue, ErrorMessage = "Номер кімнати має бути додатній")]
     public int Number { get; set; }

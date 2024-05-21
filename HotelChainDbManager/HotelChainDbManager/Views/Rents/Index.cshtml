@@ -36,15 +36,15 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Resident)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RoomNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HotelNumber)
-            </th>
+            <td>
+                 @Html.DisplayFor(model => item.Resident)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.RoomNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.HotelNumber)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CostPerDay)
             </td>
@@ -55,8 +55,22 @@
                 @Html.DisplayFor(modelItem => item.RentEnd)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", item) |
-                @Html.ActionLink("Delete", "Delete", item)
+                <a asp-action="Edit"
+                    asp-route-hotelNumber="@item.HotelNumber"
+                    asp-route-resident="@item.Resident"
+                    asp-route-roomNumber="@item.RoomNumber"
+                    asp-route-costPerDay="@item.CostPerDay"
+                    asp-route-rentStart="@item.RentStart.ToString("yyyy-MM-dd")"
+                    asp-route-rentEnd="@item.RentEnd.ToString("yyyy-MM-dd")"
+                    class="btn btn-primary">Редагувати</a>
+                <a asp-action="Delete"
+                    asp-route-hotelNumber="@item.HotelNumber"
+                    asp-route-resident="@item.Resident"
+                    asp-route-roomNumber="@item.RoomNumber"
+                    asp-route-costPerDay="@item.CostPerDay"
+                    asp-route-rentStart="@item.RentStart.ToString("yyyy-MM-dd")"
+                    asp-route-rentEnd="@item.RentEnd.ToString("yyyy-MM-dd")"
+                    class="btn btn-danger">Видалити</a>
             </td>
         </tr>
 }

@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Employee)
+                @Html.DisplayNameFor(model => model.EmployeeId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.RoomNumber)
@@ -28,7 +28,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Employee)
+                @Html.DisplayFor(modelItem => item.EmployeeId)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RoomNumber)
@@ -37,9 +37,11 @@
                     @Html.DisplayFor(modelItem => item.HotelNumber)
                 </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", item) |
-                @Html.ActionLink("Details", "Details", item) |
-                @Html.ActionLink("Delete", "Delete", item)
+                <a asp-action="Delete"
+                    asp-route-hotelNumber="@item.HotelNumber"
+                    asp-route-roomNumber="@item.RoomNumber"
+                    asp-route-employeeId="@item.EmployeeId"
+                    class="btn btn-danger">Видалити</a>
             </td>
         </tr>
 }

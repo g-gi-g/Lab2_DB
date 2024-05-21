@@ -48,22 +48,22 @@
             @Html.DisplayFor(model => model.Gender)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyPositionNavigation)
+            @Html.DisplayNameFor(model => model.CompanyPosition)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyPositionNavigation.Id)
+            @Html.DisplayFor(model => model.CompanyPositionNavigation.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HotelNumberNavigation)
+            @Html.DisplayNameFor(model => model.HotelNumber)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HotelNumberNavigation.Number)
+            @Html.DisplayFor(model => model.HotelNumber)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdCardNumber" />
         <input type="submit" value="Видалити" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-danger">Назад</a>
+        <a asp-action="Index" class="btn btn-primary">Назад</a>
     </form>
 </div>

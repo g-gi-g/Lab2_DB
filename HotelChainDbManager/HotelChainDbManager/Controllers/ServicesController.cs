@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelChainDbManager.Data;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace HotelChainDbManager.Controllers;
 
@@ -29,6 +30,7 @@ public class ServicesController : Controller
     public IActionResult Create()
     {
         ViewData["EmployeeId"] = new SelectList(_context.Employees, "IdCardNumber", "IdCardNumber");
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number");
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number");
         return View();
     }
@@ -40,6 +42,29 @@ public class ServicesController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("EmployeeId,RoomNumber,HotelNumber")] Service service)
     {
+        if (ServiceExists(service))
+        {
+            ModelState.AddModelError("HotelNumber", "Ви не можете використати цей ключ");
+            ModelState.AddModelError("RoomNumber", "Ви не можете використати цей ключ");
+            ModelState.AddModelError("EmployeeId", "Ви не можете використати цей ключ");
+            ModelState["HotelNumber"].ValidationState = ModelValidationState.Invalid;
+            ModelState["RoomNumber"].ValidationState = ModelValidationState.Invalid;
+            ModelState["EmployeeId"].ValidationState = ModelValidationState.Invalid;
+        }
+
+        if (!RoomExists(service.HotelNumber, service.RoomNumber))
+        {
+            ModelState.AddModelError("HotelNumber", "Ви не можете використати цей ключ");
+            ModelState.AddModelError("RoomNumber", "Ви не можете використати цей ключ");
+            ModelState.AddModelError("EmployeeId", "Ви не можете використати цей ключ");
+            ModelState["HotelNumber"].ValidationState = ModelValidationState.Invalid;
+            ModelState["RoomNumber"].ValidationState = ModelValidationState.Invalid;
+            ModelState["EmployeeId"].ValidationState = ModelValidationState.Invalid;
+        }
+
+        ModelState["Employee"].ValidationState = ModelValidationState.Valid;
+        ModelState["Room"].ValidationState = ModelValidationState.Valid;
+
         if (ModelState.IsValid)
         {
             _context.Add(service);
@@ -47,6 +72,7 @@ public class ServicesController : Controller
             return RedirectToAction(nameof(Index));
         }
         ViewData["EmployeeId"] = new SelectList(_context.Employees, "IdCardNumber", "IdCardNumber", service.EmployeeId);
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", service.HotelNumber);
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", service.RoomNumber);
         return View(service);
     }
@@ -59,6 +85,7 @@ public class ServicesController : Controller
             return NotFound();
         }
         ViewData["EmployeeId"] = new SelectList(_context.Employees, "IdCardNumber", "IdCardNumber", service.EmployeeId);
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", service.HotelNumber);
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", service.RoomNumber);
         return View(service);
     }
@@ -70,6 +97,9 @@ public class ServicesController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, [Bind("EmployeeId,RoomNumber,HotelNumber")] Service service)
     {
+        ModelState["Employee"].ValidationState = ModelValidationState.Valid;
+        ModelState["Room"].ValidationState = ModelValidationState.Valid;
+
         if (ModelState.IsValid)
         {
             try
@@ -91,6 +121,7 @@ public class ServicesController : Controller
             return RedirectToAction(nameof(Index));
         }
         ViewData["EmployeeId"] = new SelectList(_context.Employees, "IdCardNumber", "IdCardNumber", service.EmployeeId);
+        ViewData["HotelNumber"] = new SelectList(_context.Hotels, "Number", "Number", service.HotelNumber);
         ViewData["RoomNumber"] = new SelectList(_context.Rooms, "Number", "Number", service.RoomNumber);
         return View(service);
     }
@@ -124,5 +155,10 @@ public class ServicesController : Controller
     {
         return _context.Services.Any(e => e.RoomNumber == service.RoomNumber 
         && e.HotelNumber == service.HotelNumber && e.EmployeeId == service.EmployeeId);
+    }
+
+    private bool RoomExists(int hotelNumber, int roomNumber)
+    {
+        return _context.Rooms.Any(m => m.Number == roomNumber && m.HotelNumber == hotelNumber);
     }
 }

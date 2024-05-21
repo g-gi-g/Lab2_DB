@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HotelChainDbManager.Models.SQuery1Output>
+
+@{
+    ViewData["Title"] = "Результат";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.RoomNumber)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-primary">Назад</a>

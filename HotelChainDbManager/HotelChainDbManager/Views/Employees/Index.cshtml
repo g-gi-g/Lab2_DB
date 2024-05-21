@@ -31,10 +31,10 @@
                 @Html.DisplayNameFor(model => model.Gender)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CompanyPositionNavigation)
+                @Html.DisplayNameFor(model => model.CompanyPosition)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HotelNumberNavigation)
+                @Html.DisplayNameFor(model => model.HotelNumber)
             </th>
             <th></th>
         </tr>
@@ -61,14 +61,14 @@
                 @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyPositionNavigation.Id)
+                @Html.DisplayFor(modelItem => item.CompanyPositionNavigation.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HotelNumberNavigation.Number)
+                @Html.DisplayFor(modelItem => item.HotelNumber)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCardNumber" class="btn btn-primary">Редагувати</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCardNumber" class="btn btn-primary">Видалити</a>
+                <a asp-action="Edit" asp-route-id="@item.IdCardNumber" class="btn btn-primary">Редагувати</a>
+                <a asp-action="Delete" asp-route-id="@item.IdCardNumber" class="btn btn-danger">Видалити</a>
             </td>
         </tr>
 }

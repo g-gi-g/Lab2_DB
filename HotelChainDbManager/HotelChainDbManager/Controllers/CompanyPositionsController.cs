@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelChainDbManager.Data;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Security.Claims;
 
 namespace HotelChainDbManager.Controllers;
 
@@ -37,6 +39,12 @@ public class CompanyPositionsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Name,WorkingRate")] CompanyPosition companyPosition)
     {
+        if (CompanyPositionExists(@companyPosition.Id))
+        {
+            ModelState.AddModelError("Id", "Ви не можете використати цей ключ");
+            ModelState["Id"].ValidationState = ModelValidationState.Invalid;
+        }
+
         if (ModelState.IsValid)
         {
             _context.Add(companyPosition);

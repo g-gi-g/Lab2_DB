@@ -1,0 +1,33 @@
+﻿@model HotelChainDbManager.Models.SQuery5Input
+
+@{
+    ViewData["Title"] = "Запит";
+}
+
+<h4>Знайти номери ID-карт, ім'я та прізвища співробтників, які працюють на * ставку</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SQuery5Output">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WorkingRate" class="control-label"></label>
+                <input asp-for="WorkingRate" class="form-control" />
+                <span asp-validation-for="WorkingRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Виконати" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Назад</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

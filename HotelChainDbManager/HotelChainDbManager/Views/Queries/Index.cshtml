@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Запити";
+}
+
+<div class="text-center">
+    <h1 style="padding-bottom:20px;">Запити</h1>
+    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+        <a href="@Url.Action("SQuery1Input", "Queries")" class="btn btn-primary mb-2">Знайти номери всіх кімнат у готелі з номером * та назвою класу *</a><br>
+        <a href="@Url.Action("SQuery2Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт, ім'я та прізвища співробтників, які працюють у готелі номер * та обіймають посаду з назвою *</a><br>
+        <a href="@Url.Action("SQuery3Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт резидентів, які проживають у номерах класу з назвою *</a><br>
+        <a href="@Url.Action("SQuery4Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт, ім'я та прізвища співробтників, які працюють у готелі за адресою *</a><br>
+        <a href="@Url.Action("SQuery5Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт, ім'я та прізвища співробтників, які працюють на * ставку</a><br>
+        <a href="@Url.Action("CQuery1Input", "Queries")" class="btn btn-primary mb-2">Знайти номери кімнат та їхніх готелей, у яких множина резидентів співпадає з множиною резидентів кімнати з номером * готелю *</a><br>
+        <a href="@Url.Action("CQuery2Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт резидентів, що орендують таку саму множину кімнат, що й резидент з номером ID-карти *</a><br>
+        <a href="@Url.Action("CQuery3Input", "Queries")" class="btn btn-primary mb-2">Знайти номери ID-карт всіх працівників, які обслуговують кімнати тільки свого готелю, обіймаючи позицію з назвою *</a><br>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary mb-2">Назад</a>
+    </div>
+</div>
