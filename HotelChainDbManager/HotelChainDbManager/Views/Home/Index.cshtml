@@ -1,8 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Головна сторінка";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 style="padding-bottom:20px;">Управління даними мережі</h1>
+    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+        <a href="@Url.Action("Index", "Classes")" class="btn btn-primary mb-2">Переглянути класи</a><br>
+        <a href="@Url.Action("Index", "CompanyPositions")" class="btn btn-primary mb-2">Переглянути позиції в компанії</a><br>
+        <a href="@Url.Action("Index", "Employees")" class="btn btn-primary mb-2">Переглянути співробітників</a><br>
+        <a href="@Url.Action("Index", "Hotels")" class="btn btn-primary mb-2">Переглянути готелі</a><br>
+        <a href="@Url.Action("Index", "Rents")" class="btn btn-primary mb-2">Переглянути оренди</a><br>
+        <a href="@Url.Action("Index", "Residents")" class="btn btn-primary mb-2">Переглянути резидентів</a><br>
+        <a href="@Url.Action("Index", "Rooms")" class="btn btn-primary mb-2">Переглянути кімнати</a><br>
+        <a href="@Url.Action("Index", "Services")" class="btn btn-primary mb-2">Переглянути обслуговування</a><br>
+        <a href="@Url.Action("Index", "Queries")" class="btn btn-primary mb-2">Переглянути запити</a>
+    </div>
 </div>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" /

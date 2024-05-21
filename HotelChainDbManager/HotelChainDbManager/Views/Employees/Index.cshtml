@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<HotelChainDbManager.Data.Employee>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Працівники";
 }
 
-<h1>Index</h1>
+<h1>Працівники</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Додати</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCardNumber)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -40,6 +43,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.IdCardNumber)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
@@ -61,9 +67,8 @@
                 @Html.DisplayFor(modelItem => item.HotelNumberNavigation.Number)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCardNumber">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdCardNumber">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCardNumber">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdCardNumber" class="btn btn-primary">Редагувати</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCardNumber" class="btn btn-primary">Видалити</a>
             </td>
         </tr>
 }

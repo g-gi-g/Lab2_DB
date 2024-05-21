@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RQ790MDhsWOP/PhAc7OUhO226pv/N1rFjoRg3/W6Qnes1neH50G6O3XlmBnEDyNXAgOislUR+HyN+shLw/JDag==",
+  "dgSpecHash": "h/j/PuiGLnn8WpfMPuiWPQ4ZMnWFBOfCXmwSg+qqc4k1q9d1Zc8cZHdBjlsqfcEtnAEN9aIVYMmnrnL916FUow==",
   "success": true,
-  "projectFilePath": "E:\\БДтаІС\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
+  "projectFilePath": "E:\\БДтаІС\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Егор\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Егор\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

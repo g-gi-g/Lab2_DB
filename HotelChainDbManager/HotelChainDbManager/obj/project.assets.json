@@ -7845,11 +7845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\БДтаІС\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
+      "projectUniqueName": "E:\\БДтаІС\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
       "projectName": "HotelChainDbManager",
-      "projectPath": "E:\\БДтаІС\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
+      "projectPath": "E:\\БДтаІС\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\HotelChainDbManager.csproj",
       "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-      "outputPath": "E:\\БДтаІС\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\obj\\",
+      "outputPath": "E:\\БДтаІС\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<HotelChainDbManager.Data.Hotel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Готелі";
 }
 
-<h1>Index</h1>
+<h1>Готелі</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Додати</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Adress)
             </th>
@@ -22,12 +25,14 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Adress)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Number">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Number">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Number">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Number" class="btn btn-primary">Редагувати</a> |
+                <a asp-action="Delete" asp-route-id="@item.Number" class="btn btn-primary">Видалити</a>
             </td>
         </tr>
 }

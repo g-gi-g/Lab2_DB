@@ -1,25 +1,28 @@
 ﻿@model IEnumerable<HotelChainDbManager.Data.Room>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Номери";
 }
 
-<h1>Index</h1>
+<h1>Номери</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Cтворити</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HotelNumber)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Capacity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClassNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HotelNumberNavigation)
+                @Html.DisplayNameFor(model => model.Class)
             </th>
             <th></th>
         </tr>
@@ -28,18 +31,17 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.HotelNumber)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Capacity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClassNavigation.Id)
+                @Html.DisplayFor(modelItem => item.ClassNavigation.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HotelNumberNavigation.Number)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", item) |
+                @Html.ActionLink("Delete", "Delete", item)
             </td>
         </tr>
 }
