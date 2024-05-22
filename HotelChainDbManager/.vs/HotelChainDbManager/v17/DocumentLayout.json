@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\controllers\\queriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\controllers\\queriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\simple1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\simple1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\controllers\\queriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\controllers\\queriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\views\\queries\\cquery3input.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\views\\queries\\cquery3input.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\views\\queries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\views\\queries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\simple4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\simple4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\comparison3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
       "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\comparison3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\simple4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\simple4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|e:\\\u0431\u0434\u0442\u0430\u0456\u0441\\lab2_db\\lab2_db\\hotelchaindbmanager\\hotelchaindbmanager\\queries\\simple1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{19DC97C5-72C6-45FB-A510-E5C5CADFC56D}|HotelChainDbManager\\HotelChainDbManager.csproj|solutionrelative:hotelchaindbmanager\\queries\\simple1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +74,81 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Simple1.sql ",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Simple1.sql",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Queries\\Simple1.sql",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Simple1.sql",
+              "RelativeToolTip": "HotelChainDbManager\\Queries\\Simple1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-22T10:40:54.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CQuery3Input.cshtml",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Views\\Queries\\CQuery3Input.cshtml",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Views\\Queries\\CQuery3Input.cshtml",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Views\\Queries\\CQuery3Input.cshtml",
+              "RelativeToolTip": "HotelChainDbManager\\Views\\Queries\\CQuery3Input.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T10:10:06.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Views\\Queries\\Index.cshtml",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Views\\Queries\\Index.cshtml",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Views\\Queries\\Index.cshtml",
+              "RelativeToolTip": "HotelChainDbManager\\Views\\Queries\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T10:08:24.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Simple4.sql ",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Simple4.sql",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Queries\\Simple4.sql",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Simple4.sql",
+              "RelativeToolTip": "HotelChainDbManager\\Queries\\Simple4.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-22T09:52:21.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Comparison1.sql ",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Comparison1.sql",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Queries\\Comparison1.sql",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Comparison1.sql",
+              "RelativeToolTip": "HotelChainDbManager\\Queries\\Comparison1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-22T09:23:18.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Comparison2.sql ",
+              "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Comparison2.sql",
+              "RelativeDocumentMoniker": "HotelChainDbManager\\Queries\\Comparison2.sql",
+              "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Comparison2.sql",
+              "RelativeToolTip": "HotelChainDbManager\\Queries\\Comparison2.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-22T09:23:24.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Comparison3.sql ",
               "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Queries\\Comparison3.sql",
               "RelativeDocumentMoniker": "HotelChainDbManager\\Queries\\Comparison3.sql",
@@ -46,13 +160,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "QueriesController.cs",
               "DocumentMoniker": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Controllers\\QueriesController.cs",
               "RelativeDocumentMoniker": "HotelChainDbManager\\Controllers\\QueriesController.cs",
               "ToolTip": "E:\\\u0411\u0414\u0442\u0430\u0406\u0421\\Lab2_DB\\Lab2_DB\\HotelChainDbManager\\HotelChainDbManager\\Controllers\\QueriesController.cs",
               "RelativeToolTip": "HotelChainDbManager\\Controllers\\QueriesController.cs",
-              "ViewState": "AQIAACoBAAAAAAAAAAAUwD0BAAA+AAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAADgv30AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T22:00:40.495Z",
               "EditorCaption": ""
